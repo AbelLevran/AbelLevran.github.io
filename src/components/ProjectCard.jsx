@@ -20,8 +20,8 @@ const ProjectCard = ({ project, index }) => {
       }}
     >
       <div style={{ position: 'relative', overflow: 'hidden', paddingTop: '56.25%' }}>
-        <img 
-          src={project.image} 
+        <img
+          src={project.image}
           alt={project.title}
           style={{
             position: 'absolute',
@@ -33,7 +33,7 @@ const ProjectCard = ({ project, index }) => {
             transition: 'transform 0.5s ease'
           }}
         />
-        <div 
+        <div
           className="overlay"
           style={{
             position: 'absolute',
@@ -51,57 +51,61 @@ const ProjectCard = ({ project, index }) => {
             backdropFilter: 'blur(4px)'
           }}
         >
-          <motion.a 
-            href={project.githubUrl} 
-            target={project.githubUrl === '#' ? '_self' : '_blank'} 
-            rel="noreferrer"
-            onClick={(e) => {
-              if (project.githubUrl === '#') {
-                e.preventDefault();
-                window.location.href = '/404.html';
-              }
-            }}
-            whileHover={{ scale: 1.1 }}
-            style={{
-              width: '50px',
-              height: '50px',
-              borderRadius: '50%',
-              background: 'var(--accent-primary)',
-              color: '#000',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '20px'
-            }}
-          >
-            <FaGithub />
-          </motion.a>
-          <motion.a 
-            href={project.liveDemoUrl} 
-            target={project.liveDemoUrl === '#' ? '_self' : '_blank'} 
-            rel="noreferrer"
-            onClick={(e) => {
-              if (project.liveDemoUrl === '#') {
-                e.preventDefault();
-                window.location.href = '/404.html';
-              }
-            }}
-            whileHover={{ scale: 1.1 }}
-            style={{
-              width: '50px',
-              height: '50px',
-              borderRadius: '50%',
-              background: 'var(--bg-secondary)',
-              color: 'var(--accent-primary)',
-              border: '2px solid var(--accent-primary)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '18px'
-            }}
-          >
-            <FaExternalLinkAlt />
-          </motion.a>
+          {project.githubUrl && project.githubUrl !== '' && (
+            <motion.a
+              href={project.githubUrl}
+              target={project.githubUrl === '#' ? '_self' : '_blank'}
+              rel="noreferrer"
+              onClick={(e) => {
+                if (project.githubUrl === '#') {
+                  e.preventDefault();
+                  window.location.href = '/404.html';
+                }
+              }}
+              whileHover={{ scale: 1.1 }}
+              style={{
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                background: 'var(--accent-primary)',
+                color: '#000',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '20px'
+              }}
+            >
+              <FaGithub />
+            </motion.a>
+          )}
+          {project.liveDemoUrl && project.liveDemoUrl !== '' && (
+            <motion.a
+              href={project.liveDemoUrl}
+              target={project.liveDemoUrl === '#' ? '_self' : '_blank'}
+              rel="noreferrer"
+              onClick={(e) => {
+                if (project.liveDemoUrl === '#') {
+                  e.preventDefault();
+                  window.location.href = '/404.html';
+                }
+              }}
+              whileHover={{ scale: 1.1 }}
+              style={{
+                width: '50px',
+                height: '50px',
+                borderRadius: '50%',
+                background: 'var(--bg-secondary)',
+                color: 'var(--accent-primary)',
+                border: '2px solid var(--accent-primary)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '18px'
+              }}
+            >
+              <FaExternalLinkAlt />
+            </motion.a>
+          )}
         </div>
       </div>
 
@@ -130,10 +134,10 @@ const ProjectCard = ({ project, index }) => {
         <p style={{ color: 'var(--text-secondary)', fontSize: '15px', lineHeight: '1.6', marginBottom: '20px', flexGrow: 1 }}>
           {project.description}
         </p>
-        
+
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {project.techStack.map((tech, i) => (
-            <span 
+            <span
               key={i}
               style={{
                 fontSize: '12px',
@@ -149,7 +153,7 @@ const ProjectCard = ({ project, index }) => {
           ))}
         </div>
       </div>
-      
+
       <style>{`
         .hover-glow:hover img {
           transform: scale(1.1);

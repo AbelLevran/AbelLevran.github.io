@@ -12,7 +12,7 @@ export const projects = [
     category: ["Data Analysis", "Visualization"],
     techStack: ["Python", "NetworkX", "Folium", "GeoPandas", "Shapely", "PyProj"],
     githubUrl: "#",
-    liveDemoUrl: "#"
+    liveDemoUrl: ""
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const projects = [
     category: "Data Science",
     techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas", "TF-IDF"],
     githubUrl: "#",
-    liveDemoUrl: "#"
+    liveDemoUrl: ""
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const projects = [
     image: profitImg,
     category: "Visualization",
     techStack: ["TIBCO Spotfire", "Excel", "Data Cleaning"],
-    githubUrl: "#",
-    liveDemoUrl: "#"
+    githubUrl: "",
+    liveDemoUrl: ""
   },
 ];
