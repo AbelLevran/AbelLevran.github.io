@@ -53,8 +53,14 @@ const ProjectCard = ({ project, index }) => {
         >
           <motion.a 
             href={project.githubUrl} 
-            target="_blank" 
+            target={project.githubUrl === '#' ? '_self' : '_blank'} 
             rel="noreferrer"
+            onClick={(e) => {
+              if (project.githubUrl === '#') {
+                e.preventDefault();
+                window.location.href = '/404.html';
+              }
+            }}
             whileHover={{ scale: 1.1 }}
             style={{
               width: '50px',
@@ -72,8 +78,14 @@ const ProjectCard = ({ project, index }) => {
           </motion.a>
           <motion.a 
             href={project.liveDemoUrl} 
-            target="_blank" 
+            target={project.liveDemoUrl === '#' ? '_self' : '_blank'} 
             rel="noreferrer"
+            onClick={(e) => {
+              if (project.liveDemoUrl === '#') {
+                e.preventDefault();
+                window.location.href = '/404.html';
+              }
+            }}
             whileHover={{ scale: 1.1 }}
             style={{
               width: '50px',

@@ -51,6 +51,12 @@ const Navbar = () => {
         top: element.offsetTop - 80, // offset for fixed navbar
         behavior: 'smooth'
       });
+      // Update URL hash cleanly without causing a jump
+      if (id === 'home') {
+        window.history.replaceState(null, null, window.location.pathname);
+      } else {
+        window.history.replaceState(null, null, `#${id}`);
+      }
     }
   };
 
