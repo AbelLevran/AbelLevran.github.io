@@ -16,11 +16,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Sentiment Analysis of DeepSeek App Reviews",
-    description: "Developing a machine learning based sentiment analysis system to classify DeepSeek app user reviews into positive and negative categories. Implementing an end to end pipeline from data collection, preprocessing, feature engineering, to model evaluation. Conducting a comparative study of the performance of three main classification algorithms: SVM, K-NN, and Naive Bayes.",
+    title: "Comparative Study of Support Vector Machine, K-Nearest Neighbor, and Naive Bayes for Sentiment Analysis on DeepSeek Application User Reviews",
+    description: "Developing a machine learning based sentiment analysis system to classify DeepSeek app user reviews into positive and negative categories. Implementing an end to end pipeline from data collection, preprocessing, feature engineering, to model evaluation.",
     image: comparisonImg,
     category: "Data Science",
-    techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas"],
+    techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas", "TF-IDF"],
     githubUrl: "#",
     liveDemoUrl: "#"
   },
