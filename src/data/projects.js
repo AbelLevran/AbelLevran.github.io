@@ -22,7 +22,7 @@ export const projects = [
     image: comparisonImg,
     category: "Data Science",
     techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas", "TF-IDF"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AbelLevran/deepseek-sentiment-analysis-comparison",
     liveDemoUrl: ""
   },
   {
