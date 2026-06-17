@@ -20,7 +20,7 @@ export const projects = [
     title: "Comparative Study of Support Vector Machine, K-Nearest Neighbor, and Naive Bayes for Sentiment Analysis on DeepSeek Application User Reviews",
     description: "Developing a machine learning based sentiment analysis system to classify DeepSeek app user reviews into positive and negative categories. Implementing an end to end pipeline from data collection, preprocessing, feature engineering, to model evaluation.",
     image: comparisonImg,
-    category: "Data Science",
+    category: ["Data Science", "Data Mining"],
     techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas", "TF-IDF"],
     githubUrl: "https://github.com/AbelLevran/deepseek-sentiment-analysis-comparison",
     liveDemoUrl: ""
