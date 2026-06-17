@@ -2,6 +2,7 @@ import isochroneImg from '../assets/Isochrone_UEA.JPG';
 import comparisonImg from '../assets/comparison.JPG';
 import sentimentWebImg from '../assets/website_analysis_sentiment.JPG';
 import profitImg from '../assets/profit.JPG';
+import jobMarketImg from '../assets/jobMarket.webp';
 
 export const projects = [
   {
@@ -42,6 +43,16 @@ export const projects = [
     category: "Visualization",
     techStack: ["TIBCO Spotfire", "Excel", "Data Cleaning"],
     githubUrl: "",
+    liveDemoUrl: ""
+  },
+  {
+    id: 5,
+    title: "Job Market Analysis for Data Roles",
+    description: "An exploratory data analysis project examining salary trends across data-related roles (Data Scientist, Data Analyst, Data Engineer, etc.) from 2020–2022. The analysis uncovers how experience level, geographic location, company size, and remote work arrangements influence compensation patterns within the data industry through data visualization and statistical insights.",
+    image: jobMarketImg,
+    category: "Data Analysis",
+    techStack: ["Python", "Scikit-learn", "NLTK", "Pandas", "Flask"],
+    githubUrl: "https://github.com/AbelLevran/Job_Market_Analysis_for_Data_Roles",
     liveDemoUrl: ""
   },
 ];
