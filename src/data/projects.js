@@ -1,5 +1,5 @@
 import isochroneImg from '../assets/Isochrone_UEA.JPG';
-import comparisonImg from '../assets/comparison.JPG';
+import comparisonImg from '../assets/comparison3ML.webp';
 import sentimentWebImg from '../assets/website_analysis_sentiment.JPG';
 import profitImg from '../assets/profit.JPG';
 import jobMarketImg from '../assets/jobMarket.webp';
