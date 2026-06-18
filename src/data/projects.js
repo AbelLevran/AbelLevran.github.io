@@ -7,12 +7,12 @@ import jobMarketImg from '../assets/jobMarket.webp';
 export const projects = [
   {
     id: 1,
-    title: "Isochrone Map for Traffic (UAE) Mobility Data",
+    title: "UAE Traffic Mobility Isochrone Map",
     description: "A geospatial analysis tool that transforms raw traffic data into interactive isochrone maps. Processes 400,000+ road segments using NetworkX and Dijkstra's algorithm to generate color-coded HTML maps for evaluating travel-time coverage.",
     image: isochroneImg,
     category: ["Data Analysis", "Visualization"],
     techStack: ["Python", "NetworkX", "Folium", "GeoPandas", "Shapely", "PyProj"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AbelLevran/UAE_Traffic_Mobility_Isochrone_Map",
     liveDemoUrl: ""
   },
   {
