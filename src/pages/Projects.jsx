@@ -6,16 +6,16 @@ import { projects } from '../data/projects';
 const Projects = () => {
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Data Science', 'Data Mining', 'Visualization', 'Data Analysis'];
+  const categories = ['All'];
 
   const filteredProjects = filter === 'All'
     ? projects
     : projects.filter(project => {
-        const cats = Array.isArray(project.category)
-          ? project.category
-          : [project.category];
-        return cats.includes(filter);
-      });
+      const cats = Array.isArray(project.category)
+        ? project.category
+        : [project.category];
+      return cats.includes(filter);
+    });
 
   return (
     <motion.div
