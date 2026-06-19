@@ -28,7 +28,7 @@ export const projects = [
   {
     id: 3,
     title: "Deepsentiment Website",
-    description: "DeepSentiment is an Artificial Intelligence-based web application specifically designed to perform sentiment analysis on DeepSeek app reviews. The application uses a **Support Vector Machine (SVM)** model that has been custom-trained to predict whether a review is positive or negative.",
+    description: "DeepSentiment is an Artificial Intelligence-based web application specifically designed to perform sentiment analysis on DeepSeek app reviews. The application uses a Support Vector Machine (SVM) model that has been custom-trained to predict whether a review is positive or negative.",
     image: sentimentWebImg,
     category: ["Web Development", "Data Science", "NLP"],
     techStack: ["Python", "Scikit-learn", "NLTK", "Pandas", "Flask", "FastAPI", "Vanilla JS", "CSS", "HTML"],
