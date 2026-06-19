@@ -32,8 +32,8 @@ export const projects = [
     image: sentimentWebImg,
     category: ["Web Development", "Data Science", "NLP"],
     techStack: ["Python", "Scikit-learn", "NLTK", "Pandas", "Flask", "FastAPI", "Vanilla JS", "CSS", "HTML"],
-    githubUrl: "#",
-    liveDemoUrl: "#"
+    githubUrl: "https://github.com/AbelLevran/deepseek-sentiment-analyzer-website",
+    liveDemoUrl: "https://deepsentiment-web.vercel.app/"
   },
   {
     id: 4,
