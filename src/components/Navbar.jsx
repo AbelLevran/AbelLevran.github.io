@@ -47,15 +47,26 @@ const Navbar = () => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80, // offset for fixed navbar
-        behavior: 'smooth'
-      });
+      // Gunakan getBoundingClientRect untuk akurasi posisi absolut pada layar
+      const y = element.getBoundingClientRect().top + window.scrollY - 80;
+      try {
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
+      } catch (err) {
+        window.scrollTo(0, y); // Fallback for older mobile browsers
+      }
+      
       // Update URL hash cleanly without causing a jump
-      if (id === 'home') {
-        window.history.replaceState(null, null, window.location.pathname);
-      } else {
-        window.history.replaceState(null, null, `#${id}`);
+      try {
+        if (id === 'home') {
+          window.history.replaceState(null, null, window.location.pathname);
+        } else {
+          window.history.replaceState(null, null, `#${id}`);
+        }
+      } catch (err) {
+        // Ignore history API errors
       }
     }
   };
@@ -172,7 +183,11 @@ const Navbar = () => {
               border: 'none',
               color: 'var(--text-primary)',
               cursor: 'pointer',
-              fontSize: '24px'
+              fontSize: '24px',
+              padding: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
             {mobileMenuOpen ? <FiX /> : <FiMenu />}
@@ -184,9 +199,10 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
             style={{
               position: 'absolute',
               top: '100%',
@@ -194,7 +210,7 @@ const Navbar = () => {
               width: '100%',
               background: 'var(--bg-secondary)',
               borderBottom: '1px solid var(--glass-border)',
-              overflow: 'hidden'
+              boxShadow: '0px 10px 30px rgba(0,0,0,0.5)'
             }}
           >
             <ul style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '15px' }}>

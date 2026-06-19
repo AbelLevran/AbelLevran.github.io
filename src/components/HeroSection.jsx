@@ -101,7 +101,19 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '40px' }}
         >
-          <a href="#projects" className="btn-primary">
+          <a 
+            href="#projects" 
+            className="btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.getElementById('projects');
+              if (element) {
+                const y = element.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+                window.history.replaceState(null, null, '#projects');
+              }
+            }}
+          >
             View My Work
           </a>
           <a href="/CV_ATS_Abel Levran_2026.pdf" download className="btn-outline">
