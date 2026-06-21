@@ -101,8 +101,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '40px' }}
         >
-          <a 
-            href="#projects" 
+          <a
+            href="#projects"
             className="btn-primary"
             onClick={(e) => {
               e.preventDefault();
@@ -116,7 +116,7 @@ const HeroSection = () => {
           >
             View My Work
           </a>
-          <a href="/CV_ATS_Abel Levran_2026.pdf" download className="btn-outline">
+          <a href="/Abel Levran_CV_DATA_2026.pdf" download className="btn-outline">
             <FaDownload /> Download CV
           </a>
         </motion.div>
