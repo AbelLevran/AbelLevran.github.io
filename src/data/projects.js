@@ -17,16 +17,6 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Comparative Study of Support Vector Machine, K-Nearest Neighbor, and Naive Bayes for Sentiment Analysis on DeepSeek Application User Reviews",
-    description: "Developing a machine learning based sentiment analysis system to classify DeepSeek app user reviews into positive and negative categories. Implementing an end to end pipeline from data collection, preprocessing, feature engineering, to model evaluation.",
-    image: comparisonImg,
-    category: ["Machine Learning", "NLP", "Data Science"],
-    techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas", "TF-IDF"],
-    githubUrl: "https://github.com/AbelLevran/deepseek-sentiment-analysis-comparison",
-    liveDemoUrl: ""
-  },
-  {
-    id: 3,
     title: "Deepsentiment Website",
     description: "DeepSentiment is an Artificial Intelligence-based web application specifically designed to perform sentiment analysis on DeepSeek app reviews. The application uses a Support Vector Machine (SVM) model that has been custom-trained to predict whether a review is positive or negative.",
     image: sentimentWebImg,
@@ -36,23 +26,33 @@ export const projects = [
     liveDemoUrl: "https://deepsentiment-web.vercel.app/"
   },
   {
-    id: 4,
-    title: "Interactive Sales Dashboard",
-    description: "A comprehensive dashboard for visualizing company sales data, highlighting key performance indicators (KPIs) and trends.",
-    image: profitImg,
-    category: "Dashboard Development",
-    techStack: ["TIBCO Spotfire", "Excel", "Data Cleaning"],
-    githubUrl: "",
-    liveDemoUrl: ""
-  },
-  {
-    id: 5,
+    id: 3,
     title: "Job Market Analysis for Data Roles",
     description: "An exploratory data analysis project examining salary trends across data-related roles (Data Scientist, Data Analyst, Data Engineer, etc.) from 2020–2022. The analysis uncovers how experience level, geographic location, company size, and remote work arrangements influence compensation patterns within the data industry through data visualization and statistical insights.",
     image: jobMarketImg,
     category: ["EDA", "Data Analytics", "Data Visualization"],
     techStack: ["Python", "Scikit-learn", "NLTK", "Pandas", "Flask"],
     githubUrl: "https://github.com/AbelLevran/Job_Market_Analysis_for_Data_Roles",
+    liveDemoUrl: ""
+  },
+  {
+    id: 4,
+    title: "Comparative Study of Support Vector Machine, K-Nearest Neighbor, and Naive Bayes for Sentiment Analysis on DeepSeek Application User Reviews",
+    description: "Developing a machine learning based sentiment analysis system to classify DeepSeek app user reviews into positive and negative categories. Implementing an end to end pipeline from data collection, preprocessing, feature engineering, to model evaluation.",
+    image: comparisonImg,
+    category: ["Machine Learning", "NLP", "Data Science"],
+    techStack: ["Python", "SVM", "Scikit-learn", "NLTK", "Pandas", "TF-IDF"],
+    githubUrl: "https://github.com/AbelLevran/deepseek-sentiment-analysis-comparison",
+    liveDemoUrl: ""
+  },
+  {
+    id: 5,
+    title: "Interactive Sales Dashboard",
+    description: "A comprehensive dashboard for visualizing company sales data, highlighting key performance indicators (KPIs) and trends.",
+    image: profitImg,
+    category: "Dashboard Development",
+    techStack: ["TIBCO Spotfire", "Excel", "Data Cleaning"],
+    githubUrl: "",
     liveDemoUrl: ""
   },
 ];
